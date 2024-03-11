@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll-Triggered Style Change</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      padding: 10px;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .header {
+      background-color: #eee;
+      padding: 50px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .section {
+      height: 500px;
+      border: 1px solid #ccc;
+      margin: 20px;
+    }
+
+    /* Add a class to style the navbar and header differently when scrolled */
+    .scrolled {
+      background-color: #555 !important;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+  Navbar
+</div>
+
+<div class="header" id="header">
+  Header
+</div>
+
+<div class="section"></div>
+
+<script>
+  // JavaScript code to handle scrolling and style change
+  window.onscroll = function() {
+    var navbar = document.getElementById('navbar');
+    var header = document.getElementById('header');
+
+    // Get the offset position of the section
+    var sectionOffset = document.querySelector('.section').offsetTop;
+
+    // Check if the scroll position is below the section
+    if (window.pageYOffset > sectionOffset) {
+      navbar.classList.add('scrolled');
+      header.style.backgroundColor = '#888';
+    } else {
+      navbar.classList.remove('scrolled');
+      header.style.backgroundColor = '#eee';
+    }
+  };
+</script>
+
+</body>
+</html>
