@@ -2,8 +2,8 @@
 
 
 
-#selector {
-    /* CSS properties */
+.fullbody{
+    width: 100%;
 }
 
 
@@ -65,6 +65,10 @@
     left: 35%;
 }
 
+.mobile{
+    display: none;
+
+}
 .search-container {
     position: relative;
   }
@@ -467,6 +471,12 @@ button.normal {
 
 }
 
+#smallbanner .banner-box.box4 h4 {
+    /* Your styles go here */
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
 
 button.banner-button {
     display: inline-block;
@@ -668,4 +678,222 @@ footer .copyright{
     font-family:"Montserrat", sans-serif;
     font-weight: 300;
     font-style: normal;
+}
+
+#navbar.active{
+    right: 0;
+
+}
+#close 
+{
+    display: none;
+}
+
+/* RESPONSIVE MEdia query */
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+    #navbar {
+      /* Styles for portrait orientation */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100%;
+        width: 300px;
+        background: #ececec;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s ease;
+    }
+    #close{
+        display:  block;
+        position: absolute;
+        top: -330px;
+        right: -5px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    #navbar li {
+        margin-bottom: 20px;
+    }
+    #header{
+        width: 95%;
+    }
+    #header h3{
+        position: relative;
+        right: -180px;
+    }
+    .mobile{
+        display: block;
+        padding: 20px;
+    }
+    .mobile i{
+        padding-right: 8px;
+    }
+    #hero{
+       width: 95%;
+    }
+    #features{
+        width: 95%;
+    }
+    #features .feature-box{
+        
+        margin: 20px 25px;
+        cursor: pointer;
+    }
+
+    #product1{
+        width: 95%;
+    }
+    #banner{
+        width: 115%;
+    }
+    #banner h2{
+        font-size: 35px;
+    }
+    #smallbanner .banner-box {
+        margin: 20px 0 15px 0;
+        min-width: 105%;
+        height: 45vh;
+        
+    }
+    #smallbanner .banner-box.box4 h4 {
+        /* Your styles go here */
+        margin-bottom: 42px;
+        font-size: 75px;
+    }
+    
+    footer .col {
+        /* margin-bottom: 0; */
+        margin: 0 0 10px 0px;
+    }
+
+  }
+
+  @media only screen and (min-width: 414px) and (max-width: 896px) and (orientation: portrait) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100%;
+        width: 300px;
+        background: #ececec;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s ease;
+    }
+    #close {
+        display: block;
+        position: absolute;
+        top: -330px;
+        right: -5px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    #navbar li {
+        margin-bottom: 20px;
+    }
+    #header {
+        width: 95%;
+    }
+    #header h3 {
+        position: relative;
+        right: -180px;
+    }
+    .mobile {
+        display: block;
+        padding: 20px;
+    }
+    .mobile i {
+        padding-right: 8px;
+    }
+    #hero {
+        width: 118%;
+        padding: 0 30px;
+    }
+    #features {
+        width: 95%;
+    }
+    #features .feature-box {
+        margin: 20px 0px;
+        cursor: pointer;
+    }
+    #features .featuretext h2 {
+        font-size: 46px;
+    }
+    #product1 {
+        width: 95%;
+    }
+    #product1 .pro {
+        min-width: 360px;
+        padding: 5px 0;
+        margin: 15px 0px;
+    }
+    #product1 h2 {
+        font-size: 30px;
+    }
+    #banner {
+        width: 134%;
+    }
+    #banner.dark1 h2 {
+        font-size: 30px;
+    } 
+    #banner h2 {
+        font-size: 26px;
+    }
+    #smallbanner .banner-box {
+        margin: 10px 0 10px 0;
+        min-width: 115%;
+        height: 30vh;
+    }
+    #smallbanner .banner-box.box4 h4 {
+        margin-bottom: 10px;
+        font-size: 52px;
+    }
+    footer .col {
+        /* margin-bottom: 0; */
+        margin: 0 0 10px 0px;
+    }
+
+    #newsletter {
+        width: 115%;
+        padding: 50px 35px;
+    }
+    #newsletter h4 {
+        margin: 10px 0px 0px 0px;
+        padding-bottom: -5px;
+        padding-left: 0px;
+    }
+    #newsletter input {
+        height: 2.125rem;
+        padding: 0.5rem 5rem;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 23%;
+        outline: none;
+        margin-right: 5%;
+        position: relative;
+        top: 0px;
+        right: 30px;
+    }
+    #newsletter button {
+        font-family: 'Lexend', sans-serif;
+        font-size: 12px;
+        font-weight: 80px;
+        background-color: linear-gradient(to right, #deeaf3, #dad9d8);
+        position: relative;
+        top: 0px;
+        right: 20px;
+    }
+    #newsletter p {
+        margin: 9px 0px 0px 0px;
+    }
 }
