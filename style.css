@@ -303,6 +303,13 @@
     margin: 15px 0;
     transition: 0.3s ease;
     position: relative;
+    
+    
+}
+
+.pro a{
+    text-decoration: none;
+    color: inherit; 
 }
 #product1 .pro:hover{
     box-shadow: 10px 5px 15px rgba(224, 196, 175, 0.658);
@@ -897,3 +904,80 @@ footer .copyright{
         margin: 9px 0px 0px 0px;
     }
 }
+
+    #prodetails .single-pro-image
+    {
+        width: 40%;
+        margin-right: 50px;
+    }
+    #prodetails .single-pro-image img
+    {
+        width: 70%;
+        height: 350px;
+        margin-right: 50px;
+    }
+    #prodetails .small-img-col img{
+        width: 100%;
+        height: 150px;
+    }
+    .small-img-group{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .small-img-col{
+        flex-basis: 24%;
+        cursor: pointer;
+    }
+
+    #prodetails{
+        display: flex;
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+     #prodetails .single-pro-details{
+        width: 50%;
+     }
+
+     #prodetails .single-pro-details h4{
+        padding: 10px 0 5px 0;
+     }
+     #prodetails .single-pro-details h2{
+        font-size: 26px;
+     }
+     #prodetails .single-pro-details select{
+        display: block;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+     }
+
+     #prodetails .single-pro-details input{
+        width: 50px;
+        height: 47px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    #prodetails .single-pro-details button
+    {
+        background: rgb(74, 185, 74);
+        color: white;
+    }
+
+    #prodetails .single-pro-details input:focus{
+        outline: none;
+    }
+
+    #prodetails .single-pro-details span{
+        line-height: 25px;
+    }
+
+    .single-pro-details p{
+        font-size: 15px;
+        font-weight: 300;
+    }

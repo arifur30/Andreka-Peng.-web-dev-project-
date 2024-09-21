@@ -1,74 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll-Triggered Style Change</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-    .navbar {
-      position: sticky;
-      top: 0;
-      background-color: #333;
-      padding: 10px;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-
-    .header {
-      background-color: #eee;
-      padding: 50px;
-      text-align: center;
-      transition: background-color 0.3s ease;
-    }
-
-    .section {
-      height: 500px;
-      border: 1px solid #ccc;
-      margin: 20px;
-    }
-
-    /* Add a class to style the navbar and header differently when scrolled */
-    .scrolled {
-      background-color: #555 !important;
-    }
-  </style>
+        /* Add more styles as needed */
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>Photography Portfolio</h1>
+    </header>
 
-<div class="navbar" id="navbar">
-  Navbar
-</div>
+    <nav>
+        <!-- Add navigation links here if needed -->
+    </nav>
 
-<div class="header" id="header">
-  Header
-</div>
+    <main>
+        <section id="gallery">
+            <!-- Your photo gallery will be populated dynamically using JavaScript -->
+        </section>
+    </main>
 
-<div class="section"></div>
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
 
-<script>
-  // JavaScript code to handle scrolling and style change
-  window.onscroll = function() {
-    var navbar = document.getElementById('navbar');
-    var header = document.getElementById('header');
+    <script>
+        // JavaScript code goes here
+        const photos = [
+            // Add URLs or paths to your photos here
+        ];
 
-    // Get the offset position of the section
-    var sectionOffset = document.querySelector('.section').offsetTop;
+        const gallery = document.getElementById('gallery');
 
-    // Check if the scroll position is below the section
-    if (window.pageYOffset > sectionOffset) {
-      navbar.classList.add('scrolled');
-      header.style.backgroundColor = '#888';
-    } else {
-      navbar.classList.remove('scrolled');
-      header.style.backgroundColor = '#eee';
-    }
-  };
-</script>
+        photos.forEach(photo => {
+            const img = document.createElement('img');
+            img.src = photo;
+            img.alt = 'Photo';
+            gallery.appendChild(img);
+        });
 
+        // Add interactivity or additional functionality as needed
+    </script>
 </body>
+
 </html>
